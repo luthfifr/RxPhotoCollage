@@ -12,6 +12,7 @@
 		4277F2DE22F828C1004C53B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4277F2DC22F828C1004C53B4 /* Main.storyboard */; };
 		4277F2E022F828C3004C53B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4277F2DF22F828C3004C53B4 /* Assets.xcassets */; };
 		4277F2E322F828C3004C53B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4277F2E122F828C3004C53B4 /* LaunchScreen.storyboard */; };
+		8152D49B543CB617DBA34C6A /* Pods_KolaseFotoRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C3BB2A60D3B72E0EEE3562 /* Pods_KolaseFotoRx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4277F2DF22F828C3004C53B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4277F2E222F828C3004C53B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4277F2E422F828C3004C53B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C2C207F0D53C8E33AC5ECA /* Pods-KolaseFotoRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolaseFotoRx.debug.xcconfig"; path = "Target Support Files/Pods-KolaseFotoRx/Pods-KolaseFotoRx.debug.xcconfig"; sourceTree = "<group>"; };
+		85C3BB2A60D3B72E0EEE3562 /* Pods_KolaseFotoRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KolaseFotoRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E67757B1188312560BA4EE0D /* Pods-KolaseFotoRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolaseFotoRx.release.xcconfig"; path = "Target Support Files/Pods-KolaseFotoRx/Pods-KolaseFotoRx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8152D49B543CB617DBA34C6A /* Pods_KolaseFotoRx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				4277F2D722F828C1004C53B4 /* KolaseFotoRx */,
 				4277F2D622F828C1004C53B4 /* Products */,
+				A0C1585C2B92311908051813 /* Pods */,
+				C28A0EEEEC9161B5303FF869 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = KolaseFotoRx;
 			sourceTree = "<group>";
 		};
+		A0C1585C2B92311908051813 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66C2C207F0D53C8E33AC5ECA /* Pods-KolaseFotoRx.debug.xcconfig */,
+				E67757B1188312560BA4EE0D /* Pods-KolaseFotoRx.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C28A0EEEEC9161B5303FF869 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85C3BB2A60D3B72E0EEE3562 /* Pods_KolaseFotoRx.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4277F2E722F828C3004C53B4 /* Build configuration list for PBXNativeTarget "KolaseFotoRx" */;
 			buildPhases = (
+				049494E053B11C0D0F354D25 /* [CP] Check Pods Manifest.lock */,
 				4277F2D122F828C1004C53B4 /* Sources */,
 				4277F2D222F828C1004C53B4 /* Frameworks */,
 				4277F2D322F828C1004C53B4 /* Resources */,
+				5D69C527C4AA9AFCE1F1201D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		049494E053B11C0D0F354D25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KolaseFotoRx-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D69C527C4AA9AFCE1F1201D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KolaseFotoRx/Pods-KolaseFotoRx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KolaseFotoRx/Pods-KolaseFotoRx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KolaseFotoRx/Pods-KolaseFotoRx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4277F2D122F828C1004C53B4 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		4277F2E822F828C3004C53B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C2C207F0D53C8E33AC5ECA /* Pods-KolaseFotoRx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		4277F2E922F828C3004C53B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E67757B1188312560BA4EE0D /* Pods-KolaseFotoRx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

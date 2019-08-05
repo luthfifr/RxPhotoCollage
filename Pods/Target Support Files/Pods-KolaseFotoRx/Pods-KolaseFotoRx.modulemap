@@ -1,0 +1,6 @@
+framework module Pods_KolaseFotoRx {
+  umbrella header "Pods-KolaseFotoRx-umbrella.h"
+
+  export *
+  module * { export * }
+}
