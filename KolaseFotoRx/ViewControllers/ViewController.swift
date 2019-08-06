@@ -31,9 +31,7 @@ class ViewController: UIViewController {
             .subscribe(onNext: { [weak self] photos in
                 guard let self = self else { return }
                 
-                guard let preview = self.img_photoCollage else { return }
-                
-                preview.image = UIImage.collage(images: photos, size: preview.frame.size)
+                self.img_photoCollage.image = UIImage.collage(images: photos, size: self.img_photoCollage.frame.size)
                 
                 self.updateUI(photos: photos)
                 
