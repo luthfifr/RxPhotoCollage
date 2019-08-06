@@ -73,7 +73,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Kolase Foto" id="rhw-wD-gQb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ccv-JE-5gQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ccv-JE-5gQ">
+                            <connections>
+                                <action selector="actionAddPhoto:" destination="BYZ-38-t0r" id="mOI-uP-PRF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnAddPhoto" destination="Ccv-JE-5gQ" id="AB6-Im-fWo"/>

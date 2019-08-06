@@ -66,5 +66,13 @@ extension ViewController {
     @IBAction func actionSave(_ sender: UIButton) {
         images.value.append(UIImage(named: "fotoOrang")!)
     }
+    
+    @IBAction func actionAddPhoto(_ sender: UIBarButtonItem) {
+        guard let papanCerita = storyboard else { return }
+        
+        let destinationVC = papanCerita.instantiateViewController(withIdentifier: "tambahFoto") as! TambahFotoViewController
+        
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
 
