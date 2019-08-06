@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateUI()
+        setupUI()
         
         images.asObservable()
             .subscribe(onNext: { [weak self] photos in
@@ -35,15 +35,26 @@ class ViewController: UIViewController {
                 
                 preview.image = UIImage.collage(images: photos, size: preview.frame.size)
                 
+                self.updateUI(photos: photos)
+                
         })
         .disposed(by: disposeBag)
         
     }
     
-    private func updateUI() {
+    private func setupUI() {
         img_photoCollage.layer.borderColor = constant.purpleColor.cgColor
-        img_photoCollage.layer.borderWidth = 2
+        img_photoCollage.layer.borderWidth = constant.imgPreviewBorderWidth
         btnSave.backgroundColor = constant.purpleColor
+    }
+    
+    private func updateUI(photos: [UIImage]) {
+        btnSave.isEnabled =  photos.count == 0 || photos.count < constant.photoLimit
+        btnSave.backgroundColor = btnSave.isEnabled ? constant.purpleColor : constant.disabledBtnColor
+        btnClear.isEnabled = photos.count > 0
+        btnClear.backgroundColor = btnClear.isEnabled ? constant.redBtnClearColor : constant.disabledBtnColor
+        btnAddPhoto.isEnabled = photos.count < constant.photoLimit
+        title = photos.count > 0 ? "\(photos.count) Foto" : "Kolase Foto"
     }
 
 }
